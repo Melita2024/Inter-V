@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Inter-V
+
+AI-powered mock interview platform. Practice technical and behavioral interviews with an AI
+mentor, get real-time voice sessions, and receive detailed feedback with category scores.
+
+## Tech Stack
+
+- **Next.js 16** (App Router, Turbopack) + **React 19**
+- **Convex** — realtime database and backend functions
+- **Clerk** — authentication (email/password, Google, GitHub)
+- **Tailwind CSS v4** — styled by the PrepWise Vision design system (`docs/design-system/`)
+- **Vapi** — voice agent for live interviews (see `docs/VAPI_SETUP.md`)
 
 ## Getting Started
 
-First, run the development server:
+1. Install dependencies:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+   ```bash
+   npm install
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Copy `.env.example` to `.env.local` and fill in your keys (Clerk, Convex, Vapi).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. In the Clerk dashboard, create a JWT template named `convex` (Configure → JWT Templates →
+   New → Convex) so Convex can authenticate requests.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Run the backend and the app in two terminals:
 
-## Learn More
+   ```bash
+   npx convex dev
+   npm run dev
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+5. Open [http://localhost:3000](http://localhost:3000).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `app/(auth)/` — sign-in, sign-up, forgot-password, SSO callback
+- `app/(root)/` — dashboard, new interview, feedback report
+- `app/(session)/` — fullscreen live interview room
+- `convex/` — schema and backend functions (interviews, feedback)
+- `components/` — UI components (AppShell, InterviewRoom, FeedbackReport, auth cards)
+- `docs/design-system/` — design tokens and the canonical design spec from Stitch
+- `docs/VAPI_SETUP.md` — how to enable real voice interviews
