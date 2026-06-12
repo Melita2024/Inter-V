@@ -1,4 +1,7 @@
-import type { Appearance } from "@clerk/types";
+import type { ComponentProps } from "react";
+import type { SignIn } from "@clerk/nextjs";
+
+type Appearance = ComponentProps<typeof SignIn>["appearance"];
 
 // Maps Clerk components onto the PrepWise Vision design system tokens
 export const clerkAppearance: Appearance = {

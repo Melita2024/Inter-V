@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^7.5.1",
+    "@vapi-ai/web": "^2.5.2",
     "convex": "^1.41.0",
     "lucide-react": "^1.18.0",
     "next": "16.2.9",

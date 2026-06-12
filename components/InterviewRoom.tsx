@@ -141,7 +141,7 @@ export default function InterviewRoom({ interviewId }: { interviewId: Id<"interv
       <header className="w-full flex justify-between items-center px-4 md:px-10 h-16 border-b border-white/5 shrink-0">
         <div className="flex items-center gap-4">
           <Link href="/" className="text-headline-md font-bold text-primary">
-            InterviewIQ
+            Inter-V
           </Link>
           <div className="h-4 w-px bg-white/20 mx-2 hidden md:block" />
           <span className="label-caps text-on-surface-variant hidden md:block">

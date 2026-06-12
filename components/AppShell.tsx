@@ -26,7 +26,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
       <header className="md:hidden bg-surface/80 backdrop-blur-xl fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 h-16 border-b border-white/10">
         <Link href="/" className="flex items-center gap-2">
           <Image src="/logo.svg" alt="" width={32} height={32} />
-          <span className="text-headline-md font-bold text-primary">InterviewIQ</span>
+          <span className="text-headline-md font-bold text-primary">Inter-V</span>
         </Link>
         <UserButton />
       </header>
@@ -36,7 +36,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
         <Link href="/" className="px-6 mb-12 flex items-center gap-3">
           <Image src="/logo.svg" alt="" width={40} height={40} />
           <div>
-            <div className="text-headline-md font-bold text-primary leading-tight">InterviewIQ</div>
+            <div className="text-headline-md font-bold text-primary leading-tight">Inter-V</div>
             <div className="label-caps text-on-surface-variant mt-1">AI Interview Mentor</div>
           </div>
         </Link>
