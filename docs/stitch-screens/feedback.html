@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PrepWise - Interview Feedback</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#ffb3b0",
+                        "surface": "#131316",
+                        "on-surface": "#e4e1e6",
+                        "surface-container-low": "#1b1b1e",
+                        "tertiary-fixed": "#e3e0f7",
+                        "surface-dim": "#131316",
+                        "outline-variant": "#48454f",
+                        "primary-fixed-dim": "#cbbeff",
+                        "outline": "#938f9b",
+                        "tertiary-container": "#bebcd2",
+                        "on-primary-fixed": "#1d0e4e",
+                        "on-primary-fixed-variant": "#493d7c",
+                        "primary-fixed": "#e6deff",
+                        "error-container": "#93000a",
+                        "on-primary": "#322664",
+                        "inverse-primary": "#615596",
+                        "surface-container": "#1f1f22",
+                        "surface-container-high": "#2a2a2d",
+                        "on-tertiary-fixed-variant": "#464557",
+                        "on-secondary-fixed": "#410006",
+                        "error": "#ffb4ab",
+                        "on-surface-variant": "#c9c4d1",
+                        "tertiary": "#dad8ee",
+                        "primary": "#ded5ff",
+                        "secondary-container": "#901822",
+                        "tertiary-fixed-dim": "#c6c4da",
+                        "surface-tint": "#cbbeff",
+                        "on-secondary-container": "#ff9e9b",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-highest": "#353438",
+                        "on-primary-container": "#504483",
+                        "primary-container": "#c3b5fd",
+                        "inverse-on-surface": "#303033",
+                        "background": "#131316",
+                        "secondary-fixed": "#ffdad8",
+                        "surface-bright": "#39393c",
+                        "surface-variant": "#353438",
+                        "on-tertiary-container": "#4c4b5d",
+                        "inverse-surface": "#e4e1e6",
+                        "on-background": "#e4e1e6",
+                        "on-error": "#690005",
+                        "on-secondary": "#68000f",
+                        "surface-container-lowest": "#0e0e11",
+                        "on-secondary-fixed-variant": "#8c1520",
+                        "on-tertiary-fixed": "#1a1a2a",
+                        "secondary": "#ffb3b0",
+                        "on-tertiary": "#2f2f40"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "margin-desktop": "40px",
+                        "margin-mobile": "16px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "headline-xl": ["Hanken Grotesk"],
+                        "label-caps": ["JetBrains Mono"],
+                        "body-sm": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-gradient-radial {
+            background-image: radial-gradient(var(--tw-gradient-stops));
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen font-body-md text-body-md antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- SideNavBar (Desktop) -->
+<nav class="fixed left-0 top-0 h-screen py-8 bg-surface-container h-full w-64 hidden md:flex flex-col border-r border-white/10 z-40">
+<div class="px-6 mb-12 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="smart_toy" data-weight="fill" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<div>
+<h1 class="font-headline-lg text-headline-lg font-bold text-primary !text-xl !leading-tight">PrepWise</h1>
+<p class="font-label-caps text-label-caps text-on-surface-variant">AI Interview Mentor</p>
+</div>
+</div>
+<div class="flex-1 px-4 space-y-2">
+<a class="flex items-center gap-3 py-3 px-4 rounded-xl text-on-surface-variant pl-4 hover:bg-surface-container-high transition-colors active:opacity-80" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-body-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 py-3 px-4 rounded-xl text-on-surface-variant pl-4 hover:bg-surface-container-high transition-colors active:opacity-80" href="#">
+<span class="material-symbols-outlined" data-icon="mic">mic</span>
+<span class="font-body-md">Interviews</span>
+</a>
+<a class="flex items-center gap-3 py-3 px-4 rounded-xl text-primary font-bold border-l-4 border-primary pl-4 bg-surface-container-high hover:bg-surface-container-highest transition-colors active:opacity-80" href="#">
+<span class="material-symbols-outlined" data-icon="history" data-weight="fill" style="font-variation-settings: 'FILL' 1;">history</span>
+<span class="font-body-md">Results</span>
+</a>
+<a class="flex items-center gap-3 py-3 px-4 rounded-xl text-on-surface-variant pl-4 hover:bg-surface-container-high transition-colors active:opacity-80" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-body-md">Settings</span>
+</a>
+</div>
+<div class="px-6 mt-auto">
+<button class="w-full bg-primary text-on-primary py-3 rounded-xl font-bold hover:bg-primary/90 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+                Start New Session
+            </button>
+</div>
+</nav>
+<!-- TopAppBar (Mobile) -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 bg-surface/80 backdrop-blur-xl border-b border-white/10 md:hidden">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary">PrepWise</h1>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<button class="hover:text-primary transition-colors active:scale-95"><span class="material-symbols-outlined" data-icon="notifications">notifications</span></button>
+<button class="hover:text-primary transition-colors active:scale-95"><span class="material-symbols-outlined" data-icon="settings">settings</span></button>
+<img alt="User profile photo" class="w-8 h-8 rounded-full object-cover border border-white/10" data-alt="A small, circular avatar portrait of a young professional in a dark modern setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeEhjFSLnyTByqH_pA0PsI1EFrg_umy9h4rgH8A-HoBbNmnFKPHpXUhBUeFYfNnKRtKAn9u0xB7uldzeOvwFwnax8LA2tswdTfKyCrsCeRj1BN4x6Fq2sso-OWCvesG6r47MAruvAQmdtn_-SwrCFKssbG6GtdDzBC6VLPUhK0QT-yE2p6PvyUuutCV6nJ9XnvLEfsucDDVCRjK1TZmHbpVlbKn4PixGFWPFJQ4rXp_TI5nR3OCl-JxAd-jabBdyd83LzJbKHoc5hO"/>
+</div>
+</header>
+<!-- BottomNavBar (Mobile) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-2 pb-2 pt-2 bg-surface/90 backdrop-blur-xl docked full-width bottom-0 rounded-t-xl md:hidden border-t border-white/10 shadow-lg">
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 active:bg-surface-container-highest transition-all duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-caps text-[10px] mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 active:bg-surface-container-highest transition-all duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="record_voice_over">record_voice_over</span>
+<span class="font-label-caps text-[10px] mt-1">Practice</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-2xl px-4 py-1 active:bg-surface-container-highest transition-all duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="assessment" data-weight="fill" style="font-variation-settings: 'FILL' 1;">assessment</span>
+<span class="font-label-caps text-[10px] mt-1 font-bold">Results</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 active:bg-surface-container-highest transition-all duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-caps text-[10px] mt-1">Profile</span>
+</a>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-20 pb-24 md:pt-12 md:pl-64 md:pb-12 min-h-screen flex justify-center">
+<div class="w-full max-w-container-max px-margin-mobile md:px-margin-desktop flex flex-col gap-8">
+<!-- Header Section -->
+<header class="flex flex-col gap-2">
+<p class="font-label-caps text-primary tracking-widest uppercase">Session Review</p>
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold">Feedback on the Interview - <span class="text-on-surface-variant font-normal">Senior Frontend Engineer</span></h1>
+<p class="font-body-md text-on-surface-variant max-w-2xl mt-2">Comprehensive analysis of your performance across key technical and behavioral metrics.</p>
+</header>
+<!-- Top Grid: Score & Image -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Overall Score Card -->
+<div class="bg-surface-container-low rounded-xl border border-white/5 p-8 relative overflow-hidden flex flex-col justify-center items-center lg:col-span-1 group hover:shadow-[0_0_30px_rgba(222,213,255,0.05)] transition-all duration-500">
+<div class="absolute inset-0 bg-gradient-radial from-primary/5 to-transparent opacity-50"></div>
+<h2 class="font-label-caps text-on-surface-variant mb-6 uppercase tracking-widest relative z-10">Overall Impression</h2>
+<div class="relative w-48 h-48 flex items-center justify-center mb-4 z-10">
+<!-- Simulated Progress Ring -->
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 100 100">
+<circle cx="50" cy="50" fill="none" r="45" stroke="rgba(255,255,255,0.05)" stroke-width="8"></circle>
+<circle class="text-primary drop-shadow-[0_0_8px_rgba(222,213,255,0.5)]" cx="50" cy="50" fill="none" r="45" stroke="currentColor" stroke-dasharray="282.7" stroke-dashoffset="42.4" stroke-width="8"></circle>
+</svg>
+<div class="absolute flex flex-col items-center justify-center">
+<span class="font-headline-xl text-headline-xl font-bold font-label-caps text-primary">85</span>
+<span class="font-label-caps text-on-surface-variant">/ 100</span>
+</div>
+</div>
+<p class="font-body-sm text-center text-on-surface-variant relative z-10 max-w-[200px]">Strong performance. Ready for advanced technical rounds.</p>
+</div>
+<!-- Reference Image Card -->
+<div class="bg-surface-container-low rounded-xl border border-white/5 overflow-hidden lg:col-span-2 relative min-h-[300px]">
+<img alt="Interview analysis visualization" class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-luminosity hover:mix-blend-normal hover:opacity-80 transition-all duration-700" data-alt="A highly detailed, cinematic visualization of a digital dashboard analyzing human conversation. Glowing data streams, sentiment analysis graphs, and waveform visualizations overlay a dark, modern corporate background. The color palette is deep charcoal with striking accents of energetic primary purple and secondary coral, conveying a sense of advanced artificial intelligence evaluating professional performance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeEhjFSLnyTByqH_pA0PsI1EFrg_umy9h4rgH8A-HoBbNmnFKPHpXUhBUeFYfNnKRtKAn9u0xB7uldzeOvwFwnax8LA2tswdTfKyCrsCeRj1BN4x6Fq2sso-OWCvesG6r47MAruvAQmdtn_-SwrCFKssbG6GtdDzBC6VLPUhK0QT-yE2p6PvyUuutCV6nJ9XnvLEfsucDDVCRjK1TZmHbpVlbKn4PixGFWPFJQ4rXp_TI5nR3OCl-JxAd-jabBdyd83LzJbKHoc5hO"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full">
+<div class="inline-flex items-center gap-2 bg-surface/80 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10 mb-3">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-caps text-primary text-[10px] uppercase">AI Analysis Complete</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile font-semibold">Session Insights Generated</h3>
+</div>
+</div>
+</div>
+<!-- Breakdown Section -->
+<div class="mt-4">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile font-semibold mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="bar_chart">bar_chart</span>
+                    Breakdown of the Interview
+                </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Comm Skills -->
+<div class="bg-surface-container-low rounded-xl border border-white/5 p-6 hover:bg-surface-container transition-colors group">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-variant flex items-center justify-center text-primary group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+</div>
+<h3 class="font-body-md font-semibold">Communication Skills</h3>
+</div>
+<span class="font-label-caps text-primary text-lg font-bold">90/100</span>
+</div>
+<div class="w-full h-1.5 bg-surface-variant rounded-full mb-4 overflow-hidden">
+<div class="h-full bg-primary rounded-full w-[90%]"></div>
+</div>
+<p class="font-body-sm text-on-surface-variant">Excellent articulation of complex technical concepts. You maintained good pacing and checked for understanding frequently.</p>
+</div>
+<!-- Tech Knowledge -->
+<div class="bg-surface-container-low rounded-xl border border-white/5 p-6 hover:bg-surface-container transition-colors group">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-variant flex items-center justify-center text-primary group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined" data-icon="code">code</span>
+</div>
+<h3 class="font-body-md font-semibold">Technical Knowledge</h3>
+</div>
+<span class="font-label-caps text-primary text-lg font-bold">82/100</span>
+</div>
+<div class="w-full h-1.5 bg-surface-variant rounded-full mb-4 overflow-hidden">
+<div class="h-full bg-primary rounded-full w-[82%]"></div>
+</div>
+<p class="font-body-sm text-on-surface-variant">Strong grasp of core React concepts. Minor hesitation on advanced state management edge cases, but overall solid.</p>
+</div>
+<!-- Problem Solving -->
+<div class="bg-surface-container-low rounded-xl border border-white/5 p-6 hover:bg-surface-container transition-colors group">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-variant flex items-center justify-center text-primary group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+</div>
+<h3 class="font-body-md font-semibold">Problem Solving</h3>
+</div>
+<span class="font-label-caps text-primary text-lg font-bold">88/100</span>
+</div>
+<div class="w-full h-1.5 bg-surface-variant rounded-full mb-4 overflow-hidden">
+<div class="h-full bg-primary rounded-full w-[88%]"></div>
+</div>
+<p class="font-body-sm text-on-surface-variant">Demonstrated structured thinking. Breaking down the algorithmic challenge before coding showed great senior-level maturity.</p>
+</div>
+<!-- Cultural Fit -->
+<div class="bg-surface-container-low rounded-xl border border-white/5 p-6 hover:bg-surface-container transition-colors group">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-variant flex items-center justify-center text-primary group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+</div>
+<h3 class="font-body-md font-semibold">Cultural Fit</h3>
+</div>
+<span class="font-label-caps text-primary text-lg font-bold">95/100</span>
+</div>
+<div class="w-full h-1.5 bg-surface-variant rounded-full mb-4 overflow-hidden">
+<div class="h-full bg-primary rounded-full w-[95%]"></div>
+</div>
+<p class="font-body-sm text-on-surface-variant">Exceptional alignment with collaborative values. Responses regarding conflict resolution were empathetic and professional.</p>
+</div>
+</div>
+</div>
+<!-- Verdict Banner -->
+<div class="mt-8 bg-gradient-to-r from-primary-container/20 to-surface-container-low border border-primary/20 rounded-2xl p-8 flex flex-col md:flex-row items-center gap-8 relative overflow-hidden">
+<div class="absolute -right-12 -top-12 w-48 h-48 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex-shrink-0 w-24 h-24 rounded-full bg-primary-container flex items-center justify-center border-4 border-surface shadow-[0_0_20px_rgba(195,181,253,0.3)]">
+<span class="material-symbols-outlined text-4xl text-on-primary-container" data-icon="verified">verified</span>
+</div>
+<div class="flex-1 text-center md:text-left z-10">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary mb-2">Verdict: Ready</h2>
+<p class="font-body-md text-on-surface-variant">Based on the simulated responses, you exhibit the required technical depth and communication clarity for this role. Focus on refining advanced state management explanations before the real interview.</p>
+</div>
+<div class="flex-shrink-0 z-10">
+<button class="px-6 py-3 bg-primary text-on-primary font-bold rounded-xl hover:bg-primary/90 transition-colors active:scale-95 flex items-center gap-2">
+                        Review Transcript
+                        <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</body></html>

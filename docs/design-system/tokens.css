@@ -1,0 +1,96 @@
+/* PrepWise Vision design tokens — generated from design.md (Stitch project "VoiceReady AI Coach") */
+
+:root {
+  /* Colors — surfaces */
+  --color-background: #131316;
+  --color-on-background: #e4e1e6;
+  --color-surface: #131316;
+  --color-surface-dim: #131316;
+  --color-surface-bright: #39393c;
+  --color-surface-container-lowest: #0e0e11;
+  --color-surface-container-low: #1b1b1e;
+  --color-surface-container: #1f1f22;
+  --color-surface-container-high: #2a2a2d;
+  --color-surface-container-highest: #353438;
+  --color-surface-variant: #353438;
+  --color-on-surface: #e4e1e6;
+  --color-on-surface-variant: #c9c4d1;
+  --color-inverse-surface: #e4e1e6;
+  --color-inverse-on-surface: #303033;
+  --color-outline: #938f9b;
+  --color-outline-variant: #48454f;
+  --color-surface-tint: #cbbeff;
+
+  /* Colors — primary (soft luminous purple) */
+  --color-primary: #ded5ff;
+  --color-on-primary: #322664;
+  --color-primary-container: #c3b5fd;
+  --color-on-primary-container: #504483;
+  --color-inverse-primary: #615596;
+  --color-primary-fixed: #e6deff;
+  --color-primary-fixed-dim: #cbbeff;
+  --color-on-primary-fixed: #1d0e4e;
+  --color-on-primary-fixed-variant: #493d7c;
+
+  /* Colors — secondary (coral, critical actions) */
+  --color-secondary: #ffb3b0;
+  --color-on-secondary: #68000f;
+  --color-secondary-container: #901822;
+  --color-on-secondary-container: #ff9e9b;
+  --color-secondary-fixed: #ffdad8;
+  --color-secondary-fixed-dim: #ffb3b0;
+  --color-on-secondary-fixed: #410006;
+  --color-on-secondary-fixed-variant: #8c1520;
+
+  /* Colors — tertiary */
+  --color-tertiary: #dad8ee;
+  --color-on-tertiary: #2f2f40;
+  --color-tertiary-container: #bebcd2;
+  --color-on-tertiary-container: #4c4b5d;
+  --color-tertiary-fixed: #e3e0f7;
+  --color-tertiary-fixed-dim: #c6c4da;
+  --color-on-tertiary-fixed: #1a1a2a;
+  --color-on-tertiary-fixed-variant: #464557;
+
+  /* Colors — error */
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+
+  /* Typography */
+  --font-headline: 'Hanken Grotesk', sans-serif;
+  --font-body: 'Hanken Grotesk', sans-serif;
+  --font-label: 'JetBrains Mono', monospace;
+
+  /* headline-xl: hero / major milestones only */
+  --type-headline-xl: 700 48px/56px var(--font-headline);
+  --type-headline-xl-tracking: -0.02em;
+  /* headline-lg */
+  --type-headline-lg: 600 32px/40px var(--font-headline);
+  --type-headline-lg-tracking: -0.01em;
+  /* headline-lg-mobile */
+  --type-headline-lg-mobile: 600 24px/32px var(--font-headline);
+  /* body-md */
+  --type-body-md: 400 16px/24px var(--font-body);
+  /* body-sm */
+  --type-body-sm: 400 14px/20px var(--font-body);
+  /* label-caps: category tags (e.g., TECHNICAL, BEHAVIORAL) */
+  --type-label-caps: 500 12px/16px var(--font-label);
+  --type-label-caps-tracking: 0.05em;
+
+  /* Radii */
+  --rounded-sm: 0.25rem;
+  --rounded: 0.5rem;
+  --rounded-md: 0.75rem;
+  --rounded-lg: 1rem;
+  --rounded-xl: 1.5rem;
+  --rounded-full: 9999px;
+
+  /* Spacing & layout */
+  --spacing-unit: 8px;
+  --container-max: 1280px;
+  --gutter: 24px;
+  --margin-mobile: 16px;
+  --margin-desktop: 40px;
+}

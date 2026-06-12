@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PrepWise - Live Interview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary-fixed-dim": "#ffb3b0",
+                        "surface": "#131316",
+                        "on-surface": "#e4e1e6",
+                        "surface-container-low": "#1b1b1e",
+                        "tertiary-fixed": "#e3e0f7",
+                        "surface-dim": "#131316",
+                        "outline-variant": "#48454f",
+                        "primary-fixed-dim": "#cbbeff",
+                        "outline": "#938f9b",
+                        "tertiary-container": "#bebcd2",
+                        "on-primary-fixed": "#1d0e4e",
+                        "on-primary-fixed-variant": "#493d7c",
+                        "primary-fixed": "#e6deff",
+                        "error-container": "#93000a",
+                        "on-primary": "#322664",
+                        "inverse-primary": "#615596",
+                        "surface-container": "#1f1f22",
+                        "surface-container-high": "#2a2a2d",
+                        "on-tertiary-fixed-variant": "#464557",
+                        "on-secondary-fixed": "#410006",
+                        "error": "#ffb4ab",
+                        "on-surface-variant": "#c9c4d1",
+                        "tertiary": "#dad8ee",
+                        "primary": "#ded5ff",
+                        "secondary-container": "#901822",
+                        "tertiary-fixed-dim": "#c6c4da",
+                        "surface-tint": "#cbbeff",
+                        "on-secondary-container": "#ff9e9b",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-highest": "#353438",
+                        "on-primary-container": "#504483",
+                        "primary-container": "#c3b5fd",
+                        "inverse-on-surface": "#303033",
+                        "background": "#131316",
+                        "secondary-fixed": "#ffdad8",
+                        "surface-bright": "#39393c",
+                        "surface-variant": "#353438",
+                        "on-tertiary-container": "#4c4b5d",
+                        "inverse-surface": "#e4e1e6",
+                        "on-background": "#e4e1e6",
+                        "on-error": "#690005",
+                        "on-secondary": "#68000f",
+                        "surface-container-lowest": "#0e0e11",
+                        "on-secondary-fixed-variant": "#8c1520",
+                        "on-tertiary-fixed": "#1a1a2a",
+                        "secondary": "#ffb3b0",
+                        "on-tertiary": "#2f2f40"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "margin-desktop": "40px",
+                        "margin-mobile": "16px",
+                        "unit": "8px"
+                    },
+                    fontFamily: {
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "headline-xl": ["Hanken Grotesk"],
+                        "label-caps": ["JetBrains Mono"],
+                        "body-sm": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    fontSize: {
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: linear-gradient(180deg, rgba(30, 30, 46, 0.7) 0%, rgba(20, 20, 30, 0.8) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+        }
+        
+        .glow-hover:hover {
+            box-shadow: 0 0 20px rgba(222, 213, 255, 0.15);
+            border-color: rgba(222, 213, 255, 0.3);
+        }
+        
+        .pulse-ring {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: .5;
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md overflow-hidden">
+<!-- Top Navigation (Suppressed for focused live session, using minimal context header instead) -->
+<header class="w-full flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 border-b border-white/5">
+<div class="flex items-center gap-4">
+<span class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-primary">PrepWise</span>
+<div class="h-4 w-[1px] bg-white/20 mx-2 hidden md:block"></div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider hidden md:block">Live Session</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+<span class="font-label-caps text-label-caps text-error uppercase">Recording</span>
+</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant" id="timer">00:00:00</div>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-grow flex flex-col md:flex-row p-margin-mobile md:p-margin-desktop gap-gutter relative h-[calc(100vh-64px)]">
+<!-- AI Interviewer Card -->
+<section class="flex-1 glass-panel rounded-xl flex flex-col relative overflow-hidden glow-hover transition-all duration-300">
+<!-- Visualizer Background -->
+<div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
+<div class="w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/30 via-background to-background"></div>
+</div>
+<!-- Header -->
+<div class="p-6 z-10 flex justify-between items-start">
+<div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">AI Interviewer</h2>
+<p class="font-label-caps text-label-caps text-on-surface-variant mt-2 uppercase tracking-wider">System Active</p>
+</div>
+<div class="bg-surface-container-high p-2 rounded-lg flex items-center justify-center border border-white/5">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">graphic_eq</span>
+</div>
+</div>
+<!-- Central Orb / Visualizer -->
+<div class="flex-grow flex items-center justify-center z-10">
+<div class="relative flex items-center justify-center">
+<div class="absolute w-48 h-48 bg-primary/20 rounded-full blur-2xl pulse-ring"></div>
+<div class="absolute w-32 h-32 bg-primary/40 rounded-full blur-xl pulse-ring" style="animation-delay: 0.5s;"></div>
+<div class="w-24 h-24 bg-surface-container-highest rounded-full border-2 border-primary/50 flex items-center justify-center shadow-[0_0_30px_rgba(222,213,255,0.3)] z-20">
+<span class="material-symbols-outlined text-4xl text-primary pulse-ring" style="font-variation-settings: 'FILL' 1;">mic</span>
+</div>
+</div>
+</div>
+<!-- Transcriptions/Status Footer -->
+<div class="p-6 z-10 bg-surface-container/50 border-t border-white/5">
+<p class="font-body-md text-body-md text-on-surface-variant text-center italic">"Tell me about a time you handled a difficult engineering challenge."</p>
+</div>
+</section>
+<!-- User Card -->
+<section class="flex-1 glass-panel rounded-xl flex flex-col relative overflow-hidden glow-hover transition-all duration-300">
+<div class="absolute inset-0 z-0">
+<img alt="User video feed" class="w-full h-full object-cover opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmIfHWLzGRHZcd7RjgVVA80hlR2SRzzvneM9tZEkgP9mMazsPYQd8_S_Eh7q7AI4gLYvXHlzSSVq42ebJkAtXfm-Q8CbG9XDx1EBkVMvCkWMX5T4_aMkexC_36W-r9YHwqihCkSqbOUTqM5KorJa9yqXTuKUf1vdWLSOTm8-kD0j2r40DyjZBdJMYsK7MyFZxL07zx8JSm7idTJOpaXM2DT54Y3Ou4EYK6WxfFKuc1kkTMSK-u-ahD_agfo4dFJTOPPUiYeaT688aX"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+<!-- Header -->
+<div class="p-6 z-10 flex justify-between items-start relative">
+<div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface drop-shadow-md">Adrian</h2>
+<p class="font-label-caps text-label-caps text-on-surface-variant mt-2 uppercase tracking-wider drop-shadow-md">Candidate</p>
+</div>
+<div class="flex gap-2">
+<button class="bg-surface-container-high/80 backdrop-blur-md p-2 rounded-lg flex items-center justify-center border border-white/10 hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-on-surface" style="font-variation-settings: 'FILL' 1;">videocam</span>
+</button>
+<button class="bg-surface-container-high/80 backdrop-blur-md p-2 rounded-lg flex items-center justify-center border border-white/10 hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-on-surface" style="font-variation-settings: 'FILL' 1;">mic</span>
+</button>
+</div>
+</div>
+<!-- Bottom Content Spacing -->
+<div class="flex-grow"></div>
+<!-- Local Status -->
+<div class="p-6 z-10 relative">
+<div class="inline-flex items-center gap-2 bg-surface-container/80 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+<span class="font-label-caps text-label-caps text-on-surface">Network Stable</span>
+</div>
+</div>
+</section>
+<!-- Central Action Area -->
+<div class="absolute bottom-margin-desktop left-1/2 transform -translate-x-1/2 z-50">
+<button class="bg-secondary text-on-secondary font-headline-lg-mobile text-headline-lg-mobile font-semibold px-8 py-4 rounded-full shadow-lg hover:opacity-90 active:scale-95 transition-all flex items-center gap-3 group">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">call_end</span>
+                End Interview
+            </button>
+</div>
+</main>
+<script>
+        // Simple timer logic
+        let seconds = 0;
+        const timerElement = document.getElementById('timer');
+        
+        setInterval(() => {
+            seconds++;
+            const hrs = Math.floor(seconds / 3600);
+            const mins = Math.floor((seconds % 3600) / 60);
+            const secs = seconds % 60;
+            
+            timerElement.textContent = 
+                `${hrs.toString().padStart(2, '0')}:${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+        }, 1000);
+    </script>
+</body></html>

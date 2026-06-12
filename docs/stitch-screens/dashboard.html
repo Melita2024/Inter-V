@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PrepWise Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#ffb3b0",
+                        "surface": "#131316",
+                        "on-surface": "#e4e1e6",
+                        "surface-container-low": "#1b1b1e",
+                        "tertiary-fixed": "#e3e0f7",
+                        "surface-dim": "#131316",
+                        "outline-variant": "#48454f",
+                        "primary-fixed-dim": "#cbbeff",
+                        "outline": "#938f9b",
+                        "tertiary-container": "#bebcd2",
+                        "on-primary-fixed": "#1d0e4e",
+                        "on-primary-fixed-variant": "#493d7c",
+                        "primary-fixed": "#e6deff",
+                        "error-container": "#93000a",
+                        "on-primary": "#322664",
+                        "inverse-primary": "#615596",
+                        "surface-container": "#1f1f22",
+                        "surface-container-high": "#2a2a2d",
+                        "on-tertiary-fixed-variant": "#464557",
+                        "on-secondary-fixed": "#410006",
+                        "error": "#ffb4ab",
+                        "on-surface-variant": "#c9c4d1",
+                        "tertiary": "#dad8ee",
+                        "primary": "#ded5ff",
+                        "secondary-container": "#901822",
+                        "tertiary-fixed-dim": "#c6c4da",
+                        "surface-tint": "#cbbeff",
+                        "on-secondary-container": "#ff9e9b",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-highest": "#353438",
+                        "on-primary-container": "#504483",
+                        "primary-container": "#c3b5fd",
+                        "inverse-on-surface": "#303033",
+                        "background": "#131316",
+                        "secondary-fixed": "#ffdad8",
+                        "surface-bright": "#39393c",
+                        "surface-variant": "#353438",
+                        "on-tertiary-container": "#4c4b5d",
+                        "inverse-surface": "#e4e1e6",
+                        "on-background": "#e4e1e6",
+                        "on-error": "#690005",
+                        "on-secondary": "#68000f",
+                        "surface-container-lowest": "#0e0e11",
+                        "on-secondary-fixed-variant": "#8c1520",
+                        "on-tertiary-fixed": "#1a1a2a",
+                        "secondary": "#ffb3b0",
+                        "on-tertiary": "#2f2f40"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "margin-desktop": "40px",
+                        "margin-mobile": "16px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "headline-xl": ["Hanken Grotesk"],
+                        "label-caps": ["JetBrains Mono"],
+                        "body-sm": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md min-h-screen">
+<!-- TopAppBar (Mobile) -->
+<header class="md:hidden bg-surface/80 backdrop-blur-xl text-primary font-headline-lg-mobile text-headline-lg-mobile fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile h-16 border-b border-white/10">
+<div class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary">PrepWise</div>
+<div class="flex gap-4 items-center">
+<button class="text-on-surface-variant hover:text-primary transition-colors active:scale-95"><span class="material-symbols-outlined">notifications</span></button>
+<button class="text-on-surface-variant hover:text-primary transition-colors active:scale-95"><span class="material-symbols-outlined">settings</span></button>
+<img alt="User profile photo" class="w-8 h-8 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQ4N9oE3XMuCLubmU3qS_U2rBGVYa0cXAxvN7hBK0c8CpdUogvYff4eM3tbfsPXM5ucI0BD2o49ITfDunDDk_tra1VJyJHI2zubfGfU3_5VSTg-pHJ325nk9dENjXD92KoyGhZ1TdDrWji9Kd7mnfTqMP9OeHY-WOBbeG7y0pBncgD9EluveHC3b3EFZUjyeevyBaNS6oNDmJFKU8ZrcDvXlTxV5oIJVcU35cTJALh47UYuN7RPqYtkPup73oKoPaKAYowUUWDOzsY"/>
+</div>
+</header>
+<!-- SideNavBar (Desktop) -->
+<nav class="bg-surface-container h-full w-64 hidden md:flex flex-col border-r border-white/10 fixed left-0 top-0 h-screen py-8 z-40">
+<div class="px-8 mb-12">
+<div class="font-headline-lg text-headline-lg font-bold text-primary">PrepWise</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant mt-1">AI Interview Mentor</div>
+</div>
+<div class="flex flex-col gap-2 px-4 flex-grow font-body-md text-body-md">
+<a class="flex items-center gap-4 py-3 rounded-r-lg text-primary font-bold border-l-4 border-primary pl-4 bg-surface-container-high transition-colors active:opacity-80" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span> Dashboard
+            </a>
+<a class="flex items-center gap-4 py-3 rounded-r-lg text-on-surface-variant pl-4 border-l-4 border-transparent hover:bg-surface-container-high transition-colors active:opacity-80" href="#">
+<span class="material-symbols-outlined">mic</span> Interviews
+            </a>
+<a class="flex items-center gap-4 py-3 rounded-r-lg text-on-surface-variant pl-4 border-l-4 border-transparent hover:bg-surface-container-high transition-colors active:opacity-80" href="#">
+<span class="material-symbols-outlined">history</span> History
+            </a>
+<a class="flex items-center gap-4 py-3 rounded-r-lg text-on-surface-variant pl-4 border-l-4 border-transparent hover:bg-surface-container-high transition-colors active:opacity-80" href="#">
+<span class="material-symbols-outlined">settings</span> Settings
+            </a>
+</div>
+<div class="px-8 mt-auto">
+<button class="w-full bg-primary text-on-primary font-body-md text-body-md font-bold py-3 rounded-lg hover:brightness-110 transition-all active:scale-95 shadow-[0_0_15px_rgba(222,213,255,0.2)]">Start New Session</button>
+</div>
+</nav>
+<!-- Main Canvas -->
+<main class="md:ml-64 pt-24 pb-24 md:py-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Hero Section -->
+<section class="bg-surface-container border border-white/10 rounded-xl overflow-hidden flex flex-col md:flex-row items-center justify-between mb-12">
+<div class="p-8 md:p-12 flex-1 flex flex-col justify-center">
+<h1 class="font-headline-xl text-headline-xl text-on-surface mb-4">Get Interview-Ready with AI-Powered Practice &amp; Feedback</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 max-w-xl">Master your technical and behavioral interviews with real-time feedback, personalized coaching, and dynamic scenarios generated by our advanced AI mentor.</p>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary font-body-md text-body-md font-bold py-3 px-6 rounded-lg hover:brightness-110 transition-all active:scale-95 shadow-[0_0_20px_rgba(222,213,255,0.2)]">Start Practice</button>
+<button class="border border-primary text-primary font-body-md text-body-md font-bold py-3 px-6 rounded-lg hover:bg-primary/10 transition-all active:scale-95">View Syllabus</button>
+</div>
+</div>
+<div class="w-full md:w-5/12 h-64 md:h-full min-h-[300px] bg-surface-container-high relative">
+<img alt="AI robot illustration guiding an interview" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnTCai3wO22SUBqTv4fLR8KIs8VKtrgPWJl0RBVA3l3-FB0RTPDCqFUetxDgz2uwd18qKAfx8-NNLBtSaG2Llu-07w8ziJm53lmsbwF2KVkg-EZOA8lKOpMNGBMT0Xj1VAgFm0_Va3JgWIMjIk9Lr9UvyTH7v0D9LYtPbZzpcKCgr3DJcEh-bTBZOMeQsIs5mqQoVc72rgWuaUTXn2OuA3Q2Bmq32P-xluyoVOaABPMeXJJkoy_djI51RUjGogRVT5UI9yYTC7Re2Z"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container to-transparent hidden md:block"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent md:hidden"></div>
+</div>
+</section>
+<!-- Featured / Upcoming -->
+<section class="mb-12">
+<div class="bg-surface-container border border-primary/30 rounded-xl p-1 relative overflow-hidden shadow-[0_0_20px_rgba(222,213,255,0.1)] group">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-50"></div>
+<div class="relative bg-surface rounded-lg p-6 flex flex-col md:flex-row gap-6 items-center z-10 border border-white/5">
+<div class="w-full md:w-48 h-32 rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Upcoming full stack interview challenge visualization" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHnZS8jptLMrHzEVV3R4VRqRiMZq0H9ZfJUeLkwg__mua6Dlucwz7IdQUPHBarTOu0vkW4HHfGLY19LVDB2yQW7m9nzcaJcXzdHg1wz9cWV4HwHembLmvSnP7vUNhQFaCBwa42Tq-34nW9Z27xSt1MIPsoB1wAmdIadqeK0c4yBRGpSwQ3YJiCyHPiaP1HXnaDQG-rhOVAmOX13Y9_9yF_xzXfw_tMvmvnp7AR5acpfHX1cce_TDtzMkR4pLqLULcM7qZmm-5x0AT1"/>
+</div>
+<div class="flex-1">
+<div class="font-label-caps text-label-caps text-primary mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">calendar_today</span> UPCOMING INTERVIEW
+                        </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Full Stack Architecture Review</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Prepare to design a scalable microservices architecture. Estimated time: 45 minutes.</p>
+</div>
+<div>
+<button class="bg-primary text-on-primary font-body-md text-body-md font-bold py-3 px-6 rounded-lg hover:brightness-110 transition-all active:scale-95 whitespace-nowrap">Join Now</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Take Interviews Grid -->
+<section>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">Take Interviews</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-surface-container rounded-xl border border-white/10 hover:shadow-[0_0_20px_rgba(222,213,255,0.15)] hover:border-primary/50 transition-all p-6 flex flex-col group">
+<div class="w-12 h-12 rounded-lg bg-surface flex items-center justify-center border border-white/5 text-primary mb-4 group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">code</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-1">Front End</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-6 flex-grow">UPDATED TODAY</p>
+<button class="w-full border border-primary text-primary font-body-sm text-body-sm font-bold py-2 rounded hover:bg-primary/10 transition-colors active:scale-95">View Interview</button>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container rounded-xl border border-white/10 hover:shadow-[0_0_20px_rgba(222,213,255,0.15)] hover:border-primary/50 transition-all p-6 flex flex-col group">
+<div class="w-12 h-12 rounded-lg bg-surface flex items-center justify-center border border-white/5 text-primary mb-4 group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">smartphone</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-1">Mobile</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-6 flex-grow">OCT 12, 2023</p>
+<button class="w-full border border-primary text-primary font-body-sm text-body-sm font-bold py-2 rounded hover:bg-primary/10 transition-colors active:scale-95">View Interview</button>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container rounded-xl border border-white/10 hover:shadow-[0_0_20px_rgba(222,213,255,0.15)] hover:border-primary/50 transition-all p-6 flex flex-col group">
+<div class="w-12 h-12 rounded-lg bg-surface flex items-center justify-center border border-white/5 text-primary mb-4 group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">dns</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-1">Full Stack</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-6 flex-grow">OCT 10, 2023</p>
+<button class="w-full border border-primary text-primary font-body-sm text-body-sm font-bold py-2 rounded hover:bg-primary/10 transition-colors active:scale-95">View Interview</button>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container rounded-xl border border-white/10 hover:shadow-[0_0_20px_rgba(222,213,255,0.15)] hover:border-primary/50 transition-all p-6 flex flex-col group">
+<div class="w-12 h-12 rounded-lg bg-surface flex items-center justify-center border border-white/5 text-primary mb-4 group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">account_tree</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-1">Data Structures</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-6 flex-grow">OCT 05, 2023</p>
+<button class="w-full border border-primary text-primary font-body-sm text-body-sm font-bold py-2 rounded hover:bg-primary/10 transition-colors active:scale-95">View Interview</button>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden bg-surface/90 backdrop-blur-xl fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-2 pb-2 pt-2 border-t border-white/10 shadow-lg font-label-caps text-label-caps">
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-2xl px-4 py-1 transition-all duration-150 active:scale-95" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 active:bg-surface-container-highest rounded-2xl transition-all duration-150 active:scale-95 hover:text-primary" href="#">
+<span class="material-symbols-outlined">record_voice_over</span>
+<span class="mt-1">Practice</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 active:bg-surface-container-highest rounded-2xl transition-all duration-150 active:scale-95 hover:text-primary" href="#">
+<span class="material-symbols-outlined">assessment</span>
+<span class="mt-1">Results</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 active:bg-surface-container-highest rounded-2xl transition-all duration-150 active:scale-95 hover:text-primary" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="mt-1">Profile</span>
+</a>
+</nav>
+</body></html>
